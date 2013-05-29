@@ -29,7 +29,7 @@ def sendCommand(serialport, command):
   '''Given a command it will be formatted in XML and written to serialport for RAVEn device'''
   # Sends a simple command, such as initialize, get_instantaneous_demand, etc.
   output = ("<Command>\n  <Name>%s</Name>\n</Command>" % command)
-  log.info("Issuing command: " + command
+  log.info("Issuing command: " + command)
   serialport.write(output)
   time.sleep(0.5) # allow this command to sink in
 
